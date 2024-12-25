@@ -5,8 +5,8 @@
 
 #include <vector>
 
-class Window;
-class GameRenderer
+_INTERNAL class Window;
+_INTERNAL class GameRenderer
 {
 public:
 	GameRenderer(Window* gameWindow);

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Generic.h>
+#include <IHeapManaged.h>
 
 #include <string>
 
@@ -14,7 +15,7 @@ enum class WrapMode {
 	ClampToEdge,
 	ClampToBorder
 };
-class Texture
+class Texture : public IHeapManaged
 {
 public:
 	CPPGAPI Texture(const std::string& name, const char* path, FilterMode filter = FilterMode::Linear, WrapMode verticalWrap = WrapMode::Repeat, WrapMode horizontalWrap = WrapMode::Repeat);
@@ -27,6 +28,9 @@ public:
 	CPPGAPI const std::string& GetName() const;
 
 	static unsigned int GetMaxTextureSlots();
+
+public:
+	void Register() override;
 
 private:
 	std::string m_Name;

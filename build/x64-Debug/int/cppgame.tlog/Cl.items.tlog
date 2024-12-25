@@ -11,7 +11,7 @@ C:\Users\maxmt\source\repos\cppgame\src\Engine.cpp;C:\Users\maxmt\source\repos\c
 C:\Users\maxmt\source\repos\cppgame\src\GameObject.cpp;C:\Users\maxmt\source\repos\cppgame\build\x64-Debug\int\GameObject.obj
 C:\Users\maxmt\source\repos\cppgame\src\GridSystem.cpp;C:\Users\maxmt\source\repos\cppgame\build\x64-Debug\int\GridSystem.obj
 C:\Users\maxmt\source\repos\cppgame\src\Input.cpp;C:\Users\maxmt\source\repos\cppgame\build\x64-Debug\int\Input.obj
-C:\Users\maxmt\source\repos\cppgame\src\IUpdatable.cpp;C:\Users\maxmt\source\repos\cppgame\build\x64-Debug\int\IUpdatable.obj
+C:\Users\maxmt\source\repos\cppgame\src\Updatable.cpp;C:\Users\maxmt\source\repos\cppgame\build\x64-Debug\int\Updatable.obj
 C:\Users\maxmt\source\repos\cppgame\src\GMath.cpp;C:\Users\maxmt\source\repos\cppgame\build\x64-Debug\int\GMath.obj
 C:\Users\maxmt\source\repos\cppgame\src\physics\Bounds.cpp;C:\Users\maxmt\source\repos\cppgame\build\x64-Debug\int\Bounds.obj
 C:\Users\maxmt\source\repos\cppgame\src\rendering\EBO.cpp;C:\Users\maxmt\source\repos\cppgame\build\x64-Debug\int\EBO.obj

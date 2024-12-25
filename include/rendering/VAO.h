@@ -5,7 +5,7 @@
 
 #include <glad/glad.h>
 
-class VAO
+_INTERNAL class VAO
 {
 public:
 	VAO(bool gen = false);

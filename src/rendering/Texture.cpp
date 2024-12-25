@@ -10,7 +10,7 @@
 
 Texture::Texture(const std::string& name, const char* path, FilterMode filter, WrapMode verticalWrap, WrapMode horizontalWrap)
 	: m_ID(0), m_Name(name), m_Width(0), m_Height(0), m_Channels(0), m_Data(nullptr), m_Path(path), m_FilterMode(filter), m_VerticalWrap(verticalWrap), m_HorizontalWrap(horizontalWrap) {
-	Engine::RegisterTexture(this);
+	Register();
 
 	if (name.find(" ") != std::string::npos) {
 		CGFATAL("Texture name cannot contain spaces.");
@@ -73,4 +73,8 @@ unsigned int Texture::GetMaxTextureSlots() {
 	if (maxTextureSlots != 0) return maxTextureSlots;
 	glGetIntegerv(GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS, &maxTextureSlots);
 	return maxTextureSlots;
+}
+
+void Texture::Register() {
+	Engine::RegisterTexture(this);
 }

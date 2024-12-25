@@ -2,7 +2,7 @@
 
 #include <Debug.h>
 #include <Input.h>
-#include <GTime.h>
+#include <GameTime.h>
 #include <Window.h>
 #include <GameObject.h>
 #include <components/Collider.h>
@@ -43,7 +43,8 @@ void Engine::Run() {
 
 void Engine::Start() {
 	CGLOG("[ENGINE] Engine starting");
-	Time::Start();
+	
+	::Start();
 	for (Updatable* updatable : m_CurrentScene->GetUpdatables()) {
 		if (!updatable) {
 			CGFATAL("Failed to start engine (ES_UPDATABLE_NULLPTR)");
@@ -53,7 +54,7 @@ void Engine::Start() {
 	m_Running = true;
 }
 void Engine::Update() {
-	Time::Update();
+	GameTime::Update();
 	Input::Update();
 	for (Updatable* loop : m_CurrentScene->GetUpdatables()) {
 		loop->Update();
@@ -68,8 +69,8 @@ void Engine::Render() {
 		m_GameWindow->Render();
 
 		std::ostringstream oss;
-		oss << "Frame Time: " << Time::GetDeltaTimeSeconds() << "s" << "\n";
-		oss << "Estimated FPS: " << 1.0f / Time::GetDeltaTimeSeconds() << "fps";
+		oss << "Frame GameTime: " << GameTime::GetDeltaTimeSeconds() << "s" << "\n";
+		oss << "Estimated FPS: " << 1.0f / GameTime::GetDeltaTimeSeconds() << "fps";
 		CGLOG(oss.str());
 	}
 	else CGWARN("[ENGINE] No camera is active, rendering will be skipped");

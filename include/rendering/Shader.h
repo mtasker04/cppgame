@@ -13,7 +13,7 @@
 
 std::string GetFileContents(const char* path);
 
-class Shader : public IHeapManaged
+_INTERNAL class Shader : public IHeapManaged
 {
 public:
 	Shader();

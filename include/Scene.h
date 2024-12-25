@@ -1,8 +1,6 @@
 #pragma once
 
 #include <Generic.h>
-
-
 #include <GameObject.h>
 #include <rendering/Shader.h>
 #include <rendering/Texture.h>

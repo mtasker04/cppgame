@@ -1,14 +1,13 @@
 #pragma once
 
 #include <Generic.h>
-
 #include <Updatable.h>
 
 #include <memory>
 
-class GameObject;
-class Transform;
-class Component : protected Updatable
+_INTERNAL class GameObject;
+_INTERNAL class Transform;
+_INTERNAL class Component : protected Updatable
 {
 public:
 	Component(GameObject& gObject);

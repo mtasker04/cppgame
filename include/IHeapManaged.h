@@ -2,7 +2,7 @@
 
 #include <Generic.h>
 
-_INTERFACE IHeapManaged
+_INTERNAL _INTERFACE IHeapManaged
 {
 public:
 	virtual void Register() = 0;

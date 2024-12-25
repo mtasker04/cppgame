@@ -1,7 +1,7 @@
 #include <components/Rigidbody.h>
 
 #include <Settings.h>
-#include <GTime.h>
+#include <GameTime.h>
 #include <GameObject.h>
 
 Rigidbody::Rigidbody(GameObject& obj)
@@ -15,5 +15,5 @@ void Rigidbody::Update() {
 		velocity += Vector2(0, -(Settings::gravity * gravityScale));
 	}
 	
-	gameObject.GetTransform().position += (velocity * Time::GetDeltaTimeSeconds());
+	gameObject.GetTransform().position += (velocity * GameTime::GetDeltaTimeSeconds());
 }

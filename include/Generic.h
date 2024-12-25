@@ -1,8 +1,9 @@
 #pragma once
 
 // These keywords do nothing and are purely for code readability
-#define INTERNAL
-#define STATIC
+#define _INTERNAL
+#define _EXTERNAL
+#define _STATIC_CLASS class
 #define _INTERFACE class
 
 #define ENGINE_NAME cppg

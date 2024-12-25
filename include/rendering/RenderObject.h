@@ -6,7 +6,7 @@
 #include <rendering/EBO.h>
 #include <rendering/Shader.h>
 
-class RenderObject
+_INTERNAL class RenderObject
 {
 public:
 	RenderObject(GLfloat* vertices, GLuint* indices, GLsizeiptr vCount, GLsizeiptr iCount, GLint stride, GLint offset, Shader shader);

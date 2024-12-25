@@ -4,7 +4,7 @@
 
 #include <string>
 
-INTERNAL STATIC class EngineUtils
+_INTERNAL _STATIC_CLASS EngineUtils
 {
 public:
 	static bool StringHasSpaces(const std::string& id);

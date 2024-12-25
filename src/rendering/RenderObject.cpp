@@ -3,7 +3,7 @@
 #include <Debug.h>
 #include <Engine.h>
 #include <GridSystem.h>
-#include <GTime.h>
+#include <GameTime.h>
 #include <rendering/GameRenderer.h>
 #include <rendering/Texture.h>
 
@@ -50,7 +50,7 @@ RenderObject::RenderObject(GLfloat* vertices, GLuint* indices, GLsizeiptr vCount
 }
 
 void RenderObject::Draw() {
-	time_point_t start = Time::GetTime();
+	time_point_t start = GameTime::GetTime();
 	CGLOG("[RenderObject] Drawing object");
 	m_Shader.Use();
 	CGLOG("[RenderObject] Binding VAO");
@@ -58,9 +58,9 @@ void RenderObject::Draw() {
 	CGLOG("[RenderObject] Drawing elements");
 	glDrawElements(GL_TRIANGLES, m_EBO.Count(), GL_UNSIGNED_INT, 0);
 	m_VAO.Unbind();
-	time_point_t end = Time::GetTime();
+	time_point_t end = GameTime::GetTime();
 
-	float duration = Time::DurationToSeconds(Time::GetDuration(start, end));
+	float duration = GameTime::DurationToSeconds(GameTime::GetDuration(start, end));
 	std::ostringstream oss;
 	oss << "[RenderObject] Object drawn, took: " << duration << "s";
 	CGLOG(oss.str());

@@ -8,7 +8,7 @@
 using duration_t = std::chrono::duration<float>;
 using time_point_t = std::chrono::time_point<std::chrono::high_resolution_clock>;
 
-class Time
+class GameTime
 {
 public:
 	CPPGAPI static float DurationToSeconds(duration_t duration);

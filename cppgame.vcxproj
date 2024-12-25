@@ -186,7 +186,7 @@
     <ClInclude Include="include\Scene.h" />
     <ClInclude Include="include\scripting\Behaviour.h" />
     <ClInclude Include="include\Settings.h" />
-    <ClInclude Include="include\GTime.h" />
+    <ClInclude Include="include\GameTime.h" />
     <ClInclude Include="include\types\Color.h" />
     <ClInclude Include="include\Window.h" />
     <ClInclude Include="lib\glad\include\glad\glad.h" />
@@ -223,7 +223,7 @@
     <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\scripting\Behaviour.cpp" />
     <ClCompile Include="src\Settings.cpp" />
-    <ClCompile Include="src\GTime.cpp" />
+    <ClCompile Include="src\GameTime.cpp" />
     <ClCompile Include="src\types\Color.cpp" />
     <ClCompile Include="src\EngineUtils.cpp" />
     <ClCompile Include="src\Window.cpp" />

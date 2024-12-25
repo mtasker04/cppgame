@@ -3,7 +3,7 @@
 #include <Generic.h>
 #include <Settings.h>
 
-class GridSystem
+_INTERNAL class GridSystem
 {
 public:
 	static int NPCScale2PCScale(float npcScale, bool height = false);

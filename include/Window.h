@@ -2,10 +2,10 @@
 
 #include <Generic.h>
 
-struct GLFWwindow;
+_EXTERNAL struct GLFWwindow;
 class Engine;
-class GameRenderer;
-class Window
+_INTERNAL class GameRenderer;
+_INTERNAL class Window
 {
 public:
 	Window(const char* title, int width, int height);

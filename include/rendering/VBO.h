@@ -4,7 +4,7 @@
 
 #include <glad/glad.h>
 
-class VBO
+_INTERNAL class VBO
 {
 public:
 	VBO();

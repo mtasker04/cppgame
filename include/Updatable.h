@@ -4,7 +4,7 @@
 
 #include <IHeapManaged.h>
 
-class Updatable : public IHeapManaged
+_INTERNAL class Updatable : public IHeapManaged
 {
 public:
 	Updatable();

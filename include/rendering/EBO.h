@@ -4,7 +4,7 @@
 
 #include <glad/glad.h>
 
-class EBO
+_INTERNAL class EBO
 {
 public:
 	EBO();
