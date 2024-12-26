@@ -3,3 +3,5 @@ cppgame is a C++20 game development framework designed to simplify the creation 
 
 # Key Features
 - **Rendering** cppgame provides a simple and efficient rendering system based on OpenGL. It supports rendering of sprites, text, and shapes, as well as custom shaders.
+- **Input Handling** cppgame provides a flexible input handling system that supports keyboard, mouse, and gamepad input.
+- **Scene Management** cppgame provides a scene management system that allows developers to easily switch between different game scenes.
