@@ -1,6 +1,6 @@
-#include <scripting/Behaviour.h>
+#include <cppgame/scripting/Behaviour.h>
 
-#include <GameObject.h>
+#include <cppgame/GameObject.h>
 
 Behaviour::Behaviour(GameObject& obj)
 	: Component(obj) {}

@@ -1,12 +1,12 @@
-#include <Engine.h>
+#include <cppgame/Engine.h>
 
-#include <Debug.h>
-#include <Input.h>
-#include <GameTime.h>
-#include <Window.h>
-#include <GameObject.h>
-#include <components/Collider.h>
-#include <components/Transform.h>
+#include <cppgame/Debug.h>
+#include <cppgame/Input.h>
+#include <cppgame/GameTime.h>
+#include <cppgame/Window.h>
+#include <cppgame/GameObject.h>
+#include <cppgame/components/Collider.h>
+#include <cppgame/components/Transform.h>
 
 #include <iostream>
 
@@ -16,18 +16,23 @@ Engine::~Engine() {
 
 void Engine::RegisterUpdatable(Updatable* updatable) {
 	m_CurrentScene->GetUpdatables().push_back(updatable);
+	AddManaged(dynamic_cast<IHeapManaged*>(updatable));
 }
 void Engine::RegisterGameObject(GameObject* gObject) {
 	m_CurrentScene->GetGameObjects().push_back(gObject);
+	AddManaged(dynamic_cast<IHeapManaged*>(gObject));
 }
 void Engine::RegisterShader(Shader* shader) {
 	m_CurrentScene->GetShaders().push_back(shader);
+	AddManaged(dynamic_cast<IHeapManaged*>(shader));
 }
 void Engine::RegisterTexture(Texture* texture) {
 	m_CurrentScene->GetTextures().push_back(texture);
+	AddManaged(dynamic_cast<IHeapManaged*>(texture));
 }
 void Engine::RegisterScene(Scene* scene) {
 	m_Scenes.push_back(scene);
+	AddManaged(dynamic_cast<IHeapManaged*>(scene));
 }
 
 void Engine::Init() {
@@ -43,8 +48,7 @@ void Engine::Run() {
 
 void Engine::Start() {
 	CGLOG("[ENGINE] Engine starting");
-	
-	::Start();
+	GameTime::Start();
 	for (Updatable* updatable : m_CurrentScene->GetUpdatables()) {
 		if (!updatable) {
 			CGFATAL("Failed to start engine (ES_UPDATABLE_NULLPTR)");
@@ -87,9 +91,8 @@ void Engine::Stop() {
 	m_Running = false;
 }
 void Engine::Shutdown() {
-	for (Scene* scene : m_Scenes) {
-		scene->Unload();
-		delete scene;
+	for (IHeapManaged* managed : m_ManagedObjects) {
+		delete managed;
 	}
 }
 void Engine::Crash(const std::string& message) {
@@ -131,7 +134,12 @@ void Engine::InitWindow() {
 	m_GameWindow = new Window(m_WindowTitle.c_str(), (int)m_WindowSize.x, (int)m_WindowSize.y);
 }
 
+void Engine::AddManaged(IHeapManaged* managed) {
+	m_ManagedObjects.push_back(managed);
+}
+
 std::vector<Scene*> Engine::m_Scenes;
+std::vector<IHeapManaged*> Engine::m_ManagedObjects;
 Scene* Engine::m_CurrentScene = nullptr;
 bool Engine::m_Running = false;
 std::string Engine::m_WindowTitle = "Game Window";

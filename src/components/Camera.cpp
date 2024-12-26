@@ -1,7 +1,7 @@
-#include <components/Camera.h>
+#include <cppgame/components/Camera.h>
 
-#include <GMath.h>
-#include <Engine.h>
+#include <cppgame/Math.h>
+#include <cppgame/Engine.h>
 
 Camera::Camera(GameObject& obj, float zoom)
 	: Component(obj) {

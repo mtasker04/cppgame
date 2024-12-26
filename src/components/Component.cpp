@@ -1,7 +1,7 @@
-#include <components/Component.h>
+#include <cppgame/components/Component.h>
 
-#include <components/Transform.h>
-#include <GameObject.h>
+#include <cppgame/GameObject.h>
+#include <cppgame/components/Transform.h>
 
 Component::Component(GameObject& gObject) : gameObject(gObject) {}
 

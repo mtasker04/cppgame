@@ -1,13 +1,13 @@
-#include <Debug.h>
+#include <cppgame/Debug.h>
 
-#include <Engine.h>
+#include <cppgame/Engine.h>
 
 #include <iostream>
 
-void Debug::Log(const std::string&& message) {
+void Debug::Log(const std::string& message) {
 	std::cout << message << std::endl;
 }
-void Debug::Warn(const std::string&& message) {
+void Debug::Warn(const std::string& message) {
 	std::cout << "[WARNING] " << message << std::endl;
 }
 void Debug::Error(const std::string& message, ErrorSeverity severity) {

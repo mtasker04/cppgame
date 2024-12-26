@@ -1,4 +1,6 @@
-#include <cppgame.h>
+#include <cppgame/Engine.h>
+
+#include "../scripts/TestScript.h"
 
 // Some defines to play around with how the application runs
 // and handles different scenarios
@@ -21,7 +23,8 @@ int main()
 
 	// Create a game scene using a lambda function for scene objects
 	Scene* gameScene = new Scene("game_scene", []() {
-		GameObject test = GameObject("test");
+		GameObject* object = new GameObject("testscript object");
+		object->AddComponent<TestScript>();
 	});
 	// Load the scene at game entry
 	Engine::LoadScene(gameScene);

@@ -1,4 +1,4 @@
-#include <rendering/VBO.h>
+#include <cppgame/rendering/VBO.h>
 
 VBO::VBO()
 : m_ID(0) {}

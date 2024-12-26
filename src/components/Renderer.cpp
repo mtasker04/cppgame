@@ -1,10 +1,10 @@
-#include <components/Renderer.h>
+#include <cppgame/components/Renderer.h>
 
-#include <Debug.h>
-#include <Engine.h>
-#include <GameObject.h>
-#include <rendering/GameRenderer.h>
-#include <rendering/RenderObject.h>
+#include <cppgame/Debug.h>
+#include <cppgame/Engine.h>
+#include <cppgame/GameObject.h>
+#include <cppgame/rendering/GameRenderer.h>
+#include <cppgame/rendering/RenderObject.h>
 
 #include <glad/glad.h>
 

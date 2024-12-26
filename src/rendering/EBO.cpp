@@ -1,4 +1,4 @@
-#include <rendering/EBO.h>
+#include <cppgame/rendering/EBO.h>
 
 EBO::EBO()
 : m_ID(0), m_Count(0) {}

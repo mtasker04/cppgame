@@ -1,6 +1,6 @@
-#include <rendering/Shader.h>
+#include <cppgame/rendering/Shader.h>
 
-#include <Debug.h>
+#include <cppgame/Debug.h>
 
 #include <glad/glad.h>
 

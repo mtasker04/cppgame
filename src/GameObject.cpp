@@ -1,8 +1,8 @@
-#include <GameObject.h>
+#include <cppgame/GameObject.h>
 
-#include <Debug.h>
-#include <Engine.h>
-#include <components/Renderer.h>
+#include <cppgame/Debug.h>
+#include <cppgame/Engine.h>
+#include <cppgame/components/Renderer.h>
 
 #include <iostream>
 

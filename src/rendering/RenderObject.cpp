@@ -1,11 +1,11 @@
-#include <rendering/RenderObject.h>
+#include <cppgame/rendering/RenderObject.h>
 
-#include <Debug.h>
-#include <Engine.h>
-#include <GridSystem.h>
-#include <GameTime.h>
-#include <rendering/GameRenderer.h>
-#include <rendering/Texture.h>
+#include <cppgame/Debug.h>
+#include <cppgame/Engine.h>
+#include <cppgame/GridSystem.h>
+#include <cppgame/GameTime.h>
+#include <cppgame/rendering/GameRenderer.h>
+#include <cppgame/rendering/Texture.h>
 
 #include <vector>
 

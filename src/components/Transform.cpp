@@ -1,4 +1,4 @@
-#include <components/Transform.h>
+#include <cppgame/components/Transform.h>
 
 Transform::Transform(GameObject& gameObject)
 	: Component(gameObject), position(Vector2::Zero), rotation(Vector2::Zero), scale(Vector2::One), parent(nullptr) {}

@@ -1,6 +1,6 @@
-#include <Updatable.h>
+#include <cppgame/Updatable.h>
 
-#include <Engine.h>
+#include <cppgame/Engine.h>
 
 Updatable::Updatable() {
 	Register();

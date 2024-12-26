@@ -99,7 +99,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\glfw\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>xinput.lib;glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -119,7 +119,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\glfw\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>xinput.lib;glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -135,7 +135,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\glfw\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>xinput.lib;glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -155,46 +155,45 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\glfw\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>xinput.lib;glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\components\Camera.h" />
-    <ClInclude Include="include\components\Collider.h" />
-    <ClInclude Include="include\components\Component.h" />
-    <ClInclude Include="include\components\Renderer.h" />
-    <ClInclude Include="include\components\Rigidbody.h" />
-    <ClInclude Include="include\components\Transform.h" />
-    <ClInclude Include="include\cppgame.h" />
-    <ClInclude Include="include\Debug.h" />
-    <ClInclude Include="include\Engine.h" />
-    <ClInclude Include="include\GameObject.h" />
-    <ClInclude Include="include\Generic.h" />
-    <ClInclude Include="include\GridSystem.h" />
-    <ClInclude Include="include\IHeapManaged.h" />
-    <ClInclude Include="include\Input.h" />
-    <ClInclude Include="include\Updatable.h" />
-    <ClInclude Include="include\GMath.h" />
-    <ClInclude Include="include\physics\Bounds.h" />
-    <ClInclude Include="include\rendering\EBO.h" />
-    <ClInclude Include="include\rendering\GameRenderer.h" />
-    <ClInclude Include="include\rendering\RenderObject.h" />
-    <ClInclude Include="include\rendering\Shader.h" />
-    <ClInclude Include="include\rendering\Texture.h" />
-    <ClInclude Include="include\rendering\VAO.h" />
-    <ClInclude Include="include\rendering\VBO.h" />
-    <ClInclude Include="include\Scene.h" />
-    <ClInclude Include="include\scripting\Behaviour.h" />
-    <ClInclude Include="include\Settings.h" />
-    <ClInclude Include="include\GameTime.h" />
-    <ClInclude Include="include\types\Color.h" />
-    <ClInclude Include="include\Window.h" />
+    <ClInclude Include="include\cppgame\components\Camera.h" />
+    <ClInclude Include="include\cppgame\components\Collider.h" />
+    <ClInclude Include="include\cppgame\components\Component.h" />
+    <ClInclude Include="include\cppgame\components\Renderer.h" />
+    <ClInclude Include="include\cppgame\components\Rigidbody.h" />
+    <ClInclude Include="include\cppgame\components\Transform.h" />
+    <ClInclude Include="include\cppgame\Debug.h" />
+    <ClInclude Include="include\cppgame\Engine.h" />
+    <ClInclude Include="include\cppgame\GameObject.h" />
+    <ClInclude Include="include\cppgame\Generic.h" />
+    <ClInclude Include="include\cppgame\GridSystem.h" />
+    <ClInclude Include="include\cppgame\IHeapManaged.h" />
+    <ClInclude Include="include\cppgame\Input.h" />
+    <ClInclude Include="include\cppgame\Updatable.h" />
+    <ClInclude Include="include\cppgame\Math.h" />
+    <ClInclude Include="include\cppgame\physics\Bounds.h" />
+    <ClInclude Include="include\cppgame\rendering\EBO.h" />
+    <ClInclude Include="include\cppgame\rendering\GameRenderer.h" />
+    <ClInclude Include="include\cppgame\rendering\RenderObject.h" />
+    <ClInclude Include="include\cppgame\rendering\Shader.h" />
+    <ClInclude Include="include\cppgame\rendering\Texture.h" />
+    <ClInclude Include="include\cppgame\rendering\VAO.h" />
+    <ClInclude Include="include\cppgame\rendering\VBO.h" />
+    <ClInclude Include="include\cppgame\Scene.h" />
+    <ClInclude Include="include\cppgame\scripting\Behaviour.h" />
+    <ClInclude Include="include\cppgame\Settings.h" />
+    <ClInclude Include="include\cppgame\GameTime.h" />
+    <ClInclude Include="include\cppgame\types\Color.h" />
+    <ClInclude Include="include\cppgame\Window.h" />
     <ClInclude Include="lib\glad\include\glad\glad.h" />
     <ClInclude Include="lib\glad\include\KHR\khrplatform.h" />
     <ClInclude Include="lib\glfw\include\GLFW\glfw3.h" />
     <ClInclude Include="lib\glfw\include\GLFW\glfw3native.h" />
     <ClInclude Include="lib\stb\include\stb_image.h" />
-    <ClInclude Include="include\EngineUtils.h" />
+    <ClInclude Include="include\cppgame\EngineUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\glad\src\glad.c" />
@@ -211,7 +210,7 @@
     <ClCompile Include="src\GridSystem.cpp" />
     <ClCompile Include="src\Input.cpp" />
     <ClCompile Include="src\Updatable.cpp" />
-    <ClCompile Include="src\GMath.cpp" />
+    <ClCompile Include="src\Math.cpp" />
     <ClCompile Include="src\physics\Bounds.cpp" />
     <ClCompile Include="src\rendering\EBO.cpp" />
     <ClCompile Include="src\rendering\GameRenderer.cpp" />

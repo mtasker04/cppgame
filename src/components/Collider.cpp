@@ -1,6 +1,6 @@
-#include <components/Collider.h>
+#include <cppgame/components/Collider.h>
 
-#include <Debug.h>
+#include <cppgame/Debug.h>
 
 #include <iostream>
 #include <sstream>

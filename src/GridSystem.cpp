@@ -1,6 +1,6 @@
-#include <GridSystem.h>
+#include <cppgame/GridSystem.h>
 
-#include <Engine.h>
+#include <cppgame/Engine.h>
 
 int GridSystem::NPCScale2PCScale(float npcScale, bool height)
 {

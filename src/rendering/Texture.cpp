@@ -1,7 +1,7 @@
-#include <rendering/Texture.h>
+#include <cppgame/rendering/Texture.h>
 
-#include <Debug.h>
-#include <Engine.h>
+#include <cppgame/Debug.h>
+#include <cppgame/Engine.h>
 
 #include <filesystem>
 #include <sstream>

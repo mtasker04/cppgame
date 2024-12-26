@@ -1,8 +1,8 @@
-#include <components/Rigidbody.h>
+#include <cppgame/components/Rigidbody.h>
 
-#include <Settings.h>
-#include <GameTime.h>
-#include <GameObject.h>
+#include <cppgame/Settings.h>
+#include <cppgame/GameTime.h>
+#include <cppgame/GameObject.h>
 
 Rigidbody::Rigidbody(GameObject& obj)
 	: Component(obj) {}

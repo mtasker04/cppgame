@@ -1,4 +1,4 @@
-#include <GameTime.h>
+#include <cppgame/GameTime.h>
 
 #include <iostream>
 

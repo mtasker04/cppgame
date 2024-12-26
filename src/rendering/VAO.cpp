@@ -1,4 +1,4 @@
-#include <rendering/VAO.h>
+#include <cppgame/rendering/VAO.h>
 
 VAO::VAO(bool gen) {
 	m_ID = 0;

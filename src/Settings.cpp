@@ -1,4 +1,4 @@
-#include <Settings.h>
+#include <cppgame/Settings.h>
 
 float Settings::gravity = 0.2f;
 float Settings::maxVelocity = 1;

@@ -1,8 +1,8 @@
-#include <rendering/GameRenderer.h>
+#include <cppgame/rendering/GameRenderer.h>
 
-#include <Debug.h>
-#include <Engine.h>
-#include <Window.h>
+#include <cppgame/Debug.h>
+#include <cppgame/Engine.h>
+#include <cppgame/Window.h>
 
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>

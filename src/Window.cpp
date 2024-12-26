@@ -1,9 +1,9 @@
-#include <Window.h>
+#include <cppgame/Window.h>
 
-#include <Debug.h>
-#include <Engine.h>
-#include <Input.h>
-#include <rendering/GameRenderer.h>
+#include <cppgame/Debug.h>
+#include <cppgame/Engine.h>
+#include <cppgame/Input.h>
+#include <cppgame/rendering/GameRenderer.h>
 
 #include <GLFW/glfw3.h>
 
