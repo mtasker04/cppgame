@@ -2,11 +2,33 @@
 
 #include <sstream>
 
+CPPGAPI int Math::Abs(int value) {
+	return value < 0 ? -value : value;
+}
+CPPGAPI float Math::Abs(float value) {
+	return value < 0 ? -value : value;
+}
+CPPGAPI int Math::AbsRef(int& valueref) {
+	valueref = valueref < 0 ? -valueref : valueref;
+	return valueref;
+}
+CPPGAPI float Math::AbsRef(float& valueref) {
+	valueref = valueref < 0 ? -valueref : valueref;
+	return valueref;
+}
 int Math::Clamp(int value, int min, int max) {
 	return (value > max) ? max : (value < min) ? min : value;
 }
 float Math::Clamp(float value, float min, float max) {
 	return (value > max) ? max : (value < min) ? min : value;
+}
+int Math::ClampRef(int& valueref, int min, int max) {
+	valueref = (valueref > max) ? max : (valueref < min) ? min : valueref;
+	return valueref;
+}
+float Math::ClampRef(float& valueref, float min, float max) {
+	valueref = (valueref > max) ? max : (valueref < min) ? min : valueref;
+	return valueref;
 }
 float Math::Lerp(float a, float b, float t) {
 	return a + (b - a) * t;

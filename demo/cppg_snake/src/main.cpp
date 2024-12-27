@@ -1,6 +1,6 @@
 #include <cppgame/Engine.h>
 
-#include "../scripts/TestScript.h"
+#include "../scripts/SnakeController.h"
 
 // Some defines to play around with how the application runs
 // and handles different scenarios

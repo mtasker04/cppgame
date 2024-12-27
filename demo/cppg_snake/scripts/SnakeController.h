@@ -20,7 +20,7 @@ public:
 			if (Input::Controller::IsControllerButtonDown(ControllerButton::X)) {
 				Debug::Log("X button is down.");
 			}
-			float leftJoystickXAxis = Input::Controller::GetControllerAxis(ControllerAxis::JoystickLeftX);
+			float leftJoystickXAxis = Input::Controller::GetControllerAxis(ControllerAxis::JoystickLeftX, 0.1f, 0.9f);
 			printf("Left joystick X axis: %f", leftJoystickXAxis);
 		}
 		else {
@@ -29,4 +29,5 @@ public:
 	}
 
 private:
+	InputMode inputMode = InputMode::KeyboardMouse;
 };

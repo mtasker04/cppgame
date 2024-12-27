@@ -7,8 +7,14 @@
 class Math
 {
 public:
+	CPPGAPI static int Abs(int value);
+	CPPGAPI static float Abs(float value);
+	CPPGAPI static int AbsRef(int& valueref);
+	CPPGAPI static float AbsRef(float& valueref);
 	CPPGAPI static int Clamp(int value, int min, int max);
 	CPPGAPI static float Clamp(float value, float min, float max);
+	CPPGAPI static int ClampRef(int& valueref, int min, int max);
+	CPPGAPI static float ClampRef(float& valueref, float min, float max);
 	CPPGAPI static float Lerp(float a, float b, float t);
 	CPPGAPI static float InverseLerp(float a, float b, float value);
 };

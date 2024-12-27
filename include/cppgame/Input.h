@@ -165,16 +165,28 @@ enum class ControllerID
 	Count = 4
 };
 
+enum class InputMode
+{
+	KeyboardMouse,
+	Controller
+};
+
 class Input
 {
 public:
 	CPPGAPI static bool IsKeyDown(Key key);
 	CPPGAPI static bool IsKeyPressed(Key key);
 	CPPGAPI static bool IsKeyReleased(Key key);
+	CPPGAPI static bool AnyKeyDown();
 
 	CPPGAPI static bool IsMouseButtonDown(MouseButton button);
 	CPPGAPI static bool IsMouseButtonPressed(MouseButton button);
 	CPPGAPI static bool IsMouseButtonReleased(MouseButton button);
+	CPPGAPI static bool AnyMouseButtonDown();
+
+	CPPGAPI static bool AnyMouseOrKeyDown();
+
+	CPPGAPI static const InputMode& GetInputMode();
 
 public:
 	class Controller
@@ -185,28 +197,34 @@ public:
 		CPPGAPI static bool IsControllerButtonDown(ControllerButton button, ControllerID controller = ControllerID::One);
 		CPPGAPI static bool IsControllerButtonPressed(ControllerButton button, ControllerID controller = ControllerID::One);
 		CPPGAPI static bool IsControllerButtonReleased(ControllerButton button, ControllerID controller = ControllerID::One);
+		CPPGAPI static bool AnyControllerButtonDown(ControllerID controller = ControllerID::One);
 
-		CPPGAPI static float GetControllerAxis(ControllerAxis axis, ControllerID controller = ControllerID::One);
-	
+		CPPGAPI static float GetControllerAxis(ControllerAxis axis, float deadzoneMin, float deadzoneMax, ControllerID controller = ControllerID::One);
+		CPPGAPI static float GetControllerAxisRaw(ControllerAxis axis, ControllerID controller = ControllerID::One);
+
 		CPPGAPI static void SetControllerMotor(ControllerMotor motor, float speed, ControllerID controller = ControllerID::One);
 
 	public:
 		static void Update();
 
 	private:
-		static bool connectedControllers[(int)ControllerID::Count];
+		static bool m_ConnectedControllers[(int)ControllerID::Count];
 
-		static XINPUT_STATE controllerStates[(int)ControllerID::Count];
-		static XINPUT_STATE controllerStatesPrev[(int)ControllerID::Count];
+		static XINPUT_STATE m_ControllerStates[(int)ControllerID::Count];
+		static XINPUT_STATE m_ControllerStatesPrev[(int)ControllerID::Count];
 
-		static bool controllerButtonStates[(int)ControllerButton::Count];
-		static bool controllerButtonStatesPrev[(int)ControllerButton::Count];
+		static bool m_ControllerButtonStates[(int)ControllerButton::Count];
+		static bool m_ControllerButtonStatesPrev[(int)ControllerButton::Count];
 	};
 
 public:
 	static void Update();
 
 private:
-	static bool keyStates[(int)Key::Count];
-	static bool keyStatesPrev[(int)Key::Count];
+	static InputMode m_InputMode;
+
+	static bool m_KeyStates[(int)Key::Count];
+	static bool m_KeyStatesPrev[(int)Key::Count];
+
+	static int m_Keys[(int)Key::Count];
 };

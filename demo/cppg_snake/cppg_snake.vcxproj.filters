@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="scripts\TestScript.h">
+    <ClInclude Include="scripts\SnakeController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
